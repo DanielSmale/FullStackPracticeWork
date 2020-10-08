@@ -1,12 +1,13 @@
-$(window).on("load", function () {
-    document.getElementById("#messageBox").addEventListener("keypress", function () {
-        let string = document.getElementById("#messageBox").innerHTML;
-        let button = document.getElementById("#submitButton");
+(window).on("load", function () {
+    document.getElementById("#messageBox").addEventListener("change", function () {
+  //      let string = document.getElementById("#messageBox").textContent;
+  //      let button = document.getElementById("#submitButton");
+  let string = document.getElementsByClassName("#messageBox");
 
-        if(string != null){
-            button.disabled = false;
+        if (string.valueOf == "") {
+            document.getElementById("#submitButton");
+
         }
     });
-
 
 });
